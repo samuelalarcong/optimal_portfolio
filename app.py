@@ -1,6 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+import ecos 
 from portfolio_main import compute_portfolio_daily_returns, CONF_LEVEL
 
 st.title("📊 Portfolio Risk Dashboard")
