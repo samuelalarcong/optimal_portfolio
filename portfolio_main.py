@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import cvxpy as cp
 from sqlalchemy import create_engine, text
+import ecos 
 
 # ---------- CONFIG ----------
 ASSET_TYPES = ("EQUITY", "INDEX", "MUTUALFUND")
