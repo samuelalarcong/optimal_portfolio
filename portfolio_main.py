@@ -97,8 +97,7 @@ def compute_portfolio_daily_returns(
     objective = cp.Maximize(mu @ w - 5.0 * cp.quad_form(w, Sigma))
     constraints = [
     cp.sum(w) == 1,
-    w >= 0,
-    w <= 0.05]
+    w >= 0]
 
 
     prob = cp.Problem(objective, constraints)
