@@ -110,4 +110,5 @@ def compute_portfolio_daily_returns(
     # ---------- 5) PORTFOLIO DAILY RETURNS ----------
     port_daily = (returns * w_series).sum(axis=1)
 
-    return port_daily
+    return port_daily, w_series
+
