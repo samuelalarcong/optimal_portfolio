@@ -98,7 +98,7 @@ def compute_portfolio_daily_returns(
     constraints = [
     cp.sum(w) == 1,
     w >= 0,
-    w <= 0.10]
+    w <= 0.05]
 
 
     prob = cp.Problem(objective, constraints)
