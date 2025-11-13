@@ -95,7 +95,11 @@ def compute_portfolio_daily_returns(
     # ---------- 4) OPTIMIZATION ----------
     w = cp.Variable(n)
     objective = cp.Maximize(mu @ w - 5.0 * cp.quad_form(w, Sigma))
-    constraints = [cp.sum(w) == 1, w >= 0]
+    constraints = [
+    cp.sum(w) == 1,
+    w >= 0,
+    w <= 0.10]
+
 
     prob = cp.Problem(objective, constraints)
     prob.solve(solver=cp.ECOS)
